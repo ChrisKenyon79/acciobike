@@ -6,10 +6,42 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+    <!-- jQuery at the top prevents flash of ugly unstyled text while elements load -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Animation for bike and frontpage styles -->
+    <link rel="stylesheet" type="text/css" href="css/bike.css">
+    <!-- Font for front page banner -->
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> 
   </head>
 
   <body>
   <%= render "partials/flash" %>
     <%= yield %>
+
+  <!-- jQuery plugin for lettering manipulation -->
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js'></script>
+  <!-- Bootstrap JS -->
+  <script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <!-- Stufff for making the frontpage bike move. MOVE ME INTO A SEPERATE FILE. -->
+  <script type="text/javascript"> 
+    $(window).load(function(){
+        $(".test1").lettering("words").children('span').lettering();
+     });
+
+    $(document).ready(function() {
+      ride();
+    });
+
+    function ride() {
+      $('.wrapper').click(function() {
+        $(this).toggleClass('ride');
+      });
+    }
+  </script>
   </body>
 </html>
