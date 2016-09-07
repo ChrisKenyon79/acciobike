@@ -14,20 +14,32 @@
   <body>
   <%= render "partials/flash" %>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="background-color: #66CCFF;">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Accio Bike</a>
+          <a class="navbar-brand" href="#" style="color:white">Accio Bike</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Register a bike</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/search">Search</a></li>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/logout">Logout</a></li>
+          <li style="background-color:#FF8000"><a href="/ne" style="color: white">Register a bike</a></li>
+          <li><a href="/about" style="color: white">About</a></li>
         </ul>
+
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </form>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar-right"><a href="/login" style="color: white">Login</a></li>
+      <li class="navbar-right"><a href="/logout" style="color: white">Logout</a></li>
+    </ul>
+
       </div>
     </nav>
+
+
 
 
     <%= yield %>
