@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+<<<<<<< HEAD
 
     <!-- jQuery at the top prevents flash of ugly unstyled text while elements load -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -17,11 +18,45 @@
     <link rel="stylesheet" type="text/css" href="css/bike.css">
     <!-- Font for front page banner -->
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'> 
+=======
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+>>>>>>> a56412f7a5b55f13725b9cf9adc53627bd0805a9
   </head>
 
   <body>
   <%= render "partials/flash" %>
+
+    <nav class="navbar navbar-default" style="background-color: #66CCFF;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color:white">Accio Bike</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li style="background-color:#FF8000"><a href="/ne" style="color: white">Register a bike</a></li>
+          <li><a href="/about" style="color: white">About</a></li>
+        </ul>
+
+
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </form>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="navbar-right"><a href="/login" style="color: white">Login</a></li>
+      <li class="navbar-right"><a href="/logout" style="color: white">Logout</a></li>
+    </ul>
+
+      </div>
+    </nav>
+
+
+
+
     <%= yield %>
+<<<<<<< HEAD
 
   <!-- jQuery plugin for lettering manipulation -->
   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js'></script>
@@ -43,5 +78,9 @@
       });
     }
   </script>
+=======
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+>>>>>>> a56412f7a5b55f13725b9cf9adc53627bd0805a9
   </body>
 </html>
